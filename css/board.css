@@ -266,11 +266,7 @@
   }
 
   .board__animation {
-    position: absolute;
-    top: -110%;
-    right: 0;
-    opacity: 0.6;
-    z-index: -1;
+    display: none;
   }
 
   .board__table {
@@ -288,12 +284,13 @@
   }
 
   .board__container {
-    padding-top: 404px;
+    gap: 0;
   }
 
   .board__animation {
     top: 0;
     left: 50%;
+    display: block;
     width: 335px;
     height: 402px;
     transform: translateX(-50%);
