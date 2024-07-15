@@ -25,7 +25,6 @@ export const stepSlider = () => {
               во&nbsp;все&nbsp;концы света, включая Лос-Анжелос и&nbsp;Мельбурн</p>
           </li>
         `
-
   const li = document.querySelectorAll('.step__item');
   const counter = document.querySelector('.step__counter');
   const btns = document.getElementById('step-btns');
