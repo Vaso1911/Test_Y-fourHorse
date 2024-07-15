@@ -1,0 +1,210 @@
+.step {
+  padding-bottom: 200px;
+}
+
+.step__title {
+  position: relative;
+  margin: 0;
+  margin-bottom: 54px;
+  max-width: 804px;
+}
+
+.step__title::after {
+  content: 'Будущие источники обогащения васюкинцев';
+  position: absolute;
+  top: 55%;
+  left: 37.5%;
+  margin: 0;
+  width: 38%;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  text-transform: lowercase;
+  color: var(--link-color);
+}
+
+.step__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  counter-reset: counter-name;
+}
+
+.step__item {
+  position: relative;
+  grid-column: 1 span;
+  padding: 20px 21px 20px 72px;
+  background: url(../img/step.png);
+}
+
+.step__item:nth-child(3) {
+  grid-column: 3;
+  grid-row: 1/3;
+}
+
+.step__item:last-child {
+  grid-column: 2 span;
+}
+
+.step__item::after {
+  counter-increment: counter-name;
+  content: counter(counter-name);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  background-color: var(--light-color);
+}
+
+.step__descr {
+  position: relative;
+  margin: 0;
+  max-width: 446px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+}
+
+.step__item--plane::before {
+  content: url(../img/plane.png);
+  position: absolute;
+  top: -71%;
+  right: -8%;
+}
+
+.step__btns {
+  display: none;
+}
+
+@media (max-width: 1365px) {
+  .step__item--plane::before {
+    top: -94%;
+    right: -12%;
+  }
+}
+
+@media (max-width: 990px) {
+  .step {
+    padding-bottom: 120px;
+  }
+
+  .step__list {
+    display: flex;
+    flex-direction: column;
+
+  }
+}
+
+@media (max-width: 768px) {
+  .step {
+    padding-bottom: 115px;
+  }
+
+  .step__title {
+    margin-bottom: 198px;
+  }
+
+  .step__title::after {
+    top: 105%;
+    left: 0;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .step__list {
+    display: flex;
+    position: relative;
+    margin-bottom: 28px;
+    width: 100%;
+    min-height: 300px;
+  }
+
+  .step__list::after {
+    content: url(../img/plane-mobile.png);
+    position: absolute;
+    top: -43%;
+    z-index: 1;
+  }
+
+  .step__item {
+    position: absolute;
+    display: none;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    padding: 62px 20px 20px 72px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    min-width: 335px;
+    width: 100%;
+    min-height: 300px;
+  }
+
+  .step__item::after {
+    display: none;
+  }
+
+  .step__item--active {
+    display: flex;
+    opacity: 1;
+  }
+
+
+  .step__pagination {
+    width: 10px;
+    height: 10px;
+    background-color: var(--gray-color);
+    border-radius: 100%;
+  }
+
+  .step__pagination--active {
+    background-color: var(--dark-color);
+  }
+
+  .step__btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin: auto;
+    width: 60%;
+  }
+
+  .step__counter {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .step__descr {
+    font-size: 18px;
+  }
+
+  .step__descr::after {
+    counter-increment: counter-name;
+    content: counter(counter-name);
+    position: absolute;
+    top: 0;
+    left: -22%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    background-color: var(--light-color);
+  }
+}

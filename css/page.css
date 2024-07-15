@@ -1,0 +1,167 @@
+.page {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--light-color);
+  overflow-x: hidden;
+  color: var(--dark-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 72px;
+  max-width: 1366px;
+}
+
+.title {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 135%;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+
+.text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--link-color);
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn {
+  padding: 0;
+  max-height: 44px;
+  border: 0;
+  background: transparent;
+  outline: 0;
+  cursor: pointer;
+}
+
+.btn-svg {
+  color: var(--dark-color);
+  transition: color 0.3s ease-in-out;
+}
+
+.btn-svg:hover {
+  color: var(--hover-color);
+}
+
+.btn:disabled {
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+.accent-color {
+  color: var(--accent-color);
+}
+
+.sun {
+  position: relative;
+  width: 777px;
+  height: 777px;
+  overflow: hidden;
+}
+
+.text-c {
+  display: block;
+  text-align: center;
+}
+
+.text-r {
+  display: block;
+  text-align: right;
+}
+
+.last-price {
+  text-decoration: line-through #F54932;
+}
+
+.logo {
+  position: absolute;
+  top: 26px;
+  display: block;
+  line-height: 0;
+  z-index: 3;
+}
+
+@media (max-width: 1365px) {
+  .container {
+    padding: 0 32px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 990px) {
+
+
+  .section-title {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .logo {
+    top: 18px;
+  }
+
+  .logo__img {
+    width: 213px;
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 28px;
+
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  .text {
+    font-size: 18px;
+  }
+
+  .btn {
+    max-height: 36px;
+  }
+
+  .btn-svg {
+    width: 36px;
+    height: 36px;
+  }
+}

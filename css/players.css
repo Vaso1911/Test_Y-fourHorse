@@ -1,0 +1,133 @@
+.players {
+  padding-bottom: 140px;
+  height: 100%;
+}
+
+.players__container {
+  position: relative;
+}
+
+.players__title {
+  margin: 0;
+  margin-bottom: 60px;
+}
+
+.players__btns {
+  position: absolute;
+  top: 10px;
+  right: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  min-width: 152px;
+}
+
+.players__list {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.players__item {
+  display: none;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.players__item--active {
+  display: block;
+  opacity: 1;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.player__img {
+  margin-bottom: 28px;
+}
+
+.player__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 145%;
+}
+
+.player__awards {
+  display: block;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  opacity: 0.6;
+}
+
+.player__link {
+  display: block;
+  padding: 6px 12px;
+  border: 1px solid var(--link-color);
+  border-radius: 62px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  background-color: transparent;
+  color: var(--link-color);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.player__link:hover {
+  background-color: var(--link-color);
+  color: var(--light-color);
+}
+
+@media (max-width: 1365px) {
+  .players__btns {
+    right: 32px;
+  }
+}
+
+@media (max-width: 990px) {
+  .players {
+    padding-bottom: 100px;
+  }
+
+  .players__btns {
+    top: 2px;
+  }
+}
+
+@media (max-width: 768px) {
+  .players {
+    padding-bottom: 142px;
+  }
+
+  .players__container {
+    padding-bottom: 37px;
+  }
+
+  .players__btns {
+    top: 100%;
+    left: 52%;
+    gap: 13px;
+    transform: translateX(-50%);
+  }
+
+  .players__title {
+    margin-bottom: 40px;
+  }
+
+  .player__img {
+    width: 244px;
+    height: 244px;
+  }
+}
